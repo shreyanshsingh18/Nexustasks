@@ -46,7 +46,7 @@ A full-stack task management application for teams with role-based access, proje
    npm run dev
    ```
 
-5. Open [team-task-manager-three-omega.vercel.app](team-task-manager-three-omega.vercel.app) in your browser.
+5. Open [team-task-manager-three-omega.vercel.app](https://nexusproject29.netlify.app/login) in your browser.
 
 ### First Time Setup
 
