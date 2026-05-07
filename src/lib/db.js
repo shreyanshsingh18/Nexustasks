@@ -2,10 +2,6 @@ import mongoose from "mongoose";
 
 let MONGODB_URI = process.env.MONGODB_URI;
 
-if (!MONGODB_URI) {
-  throw new Error("Please define the MONGODB_URI environment variable in .env.local");
-}
-
 /**
  * Global cache for the MongoDB connection to prevent
  * multiple connections in development (hot reload).
@@ -17,6 +13,10 @@ if (!cached) {
 }
 
 async function dbConnect() {
+  if (!MONGODB_URI) {
+    throw new Error("Please define the MONGODB_URI environment variable");
+  }
+
   if (cached.conn) {
     return cached.conn;
   }
